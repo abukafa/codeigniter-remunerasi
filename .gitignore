@@ -1,0 +1,26 @@
+# Ignore everything in the vendor directory
+/vendor/*
+# Except this file
+!vendor/.gitignore
+
+# Ignore Composer lock file
+/composer.lock
+
+# Ignore environment file
+/.env
+
+# Ignore everything in the writable directory
+/writable/*
+# Except this file
+!writable/.gitignore
+
+# Ignore everything in the public/uploads directory
+/public/uploads/*
+# Except this file
+!public/uploads/.gitignore
+
+# Ignore IDE directories
+/.idea/
+/nbproject/
+/.vscode/
+/*.code-workspace
