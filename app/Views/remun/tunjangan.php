@@ -65,7 +65,7 @@ $this->section('content');
                                 </td>
                                 <td class="d-none d-lg-table-cell text-center">
                                     <button class="btn btn-success editTunjangan" data-id="<?= $row['id'] ?>" data-toggle="modal" data-animation="bounce" data-target=".myModalForm"><i class="mdi mdi-lead-pencil"></i></button>
-                                    <form action="/tunjangan/<?= $row['id']; ?>" method="post" class="d-inline" id="delete-<?= $row['id'] ?>">
+                                    <form action="/tunjangan/hapus/<?= $row['id']; ?>" method="post" class="d-inline" id="delete-<?= $row['id'] ?>">
                                         <?= csrf_field(); ?>
                                         <input type="hidden" name="_method" value="delete">
                                         <button type="button" class="btn btn-danger delete-<?= $row['id'] ?>"><i class="mdi mdi-delete-sweep"></i></button>

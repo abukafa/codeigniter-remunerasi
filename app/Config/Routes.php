@@ -57,14 +57,16 @@ $routes->post('/absensi/hapus/(:num)/(:any)', 'OfficeAbsensi::delete/$1/$2', ['f
 $routes->get('/skim', 'RemunSkim::index', ['filter' => 'admin']);
 $routes->post('/skim/baru', 'RemunSkim::insert', ['filter' => 'admin']);
 $routes->post('/skim/(:num)', 'RemunSkim::update/$1', ['filter' => 'admin']);
-$routes->delete('/skim/(:num)', 'RemunSkim::delete/$1', ['filter' => 'admin']);
+// $routes->delete('/skim/(:num)', 'RemunSkim::delete/$1', ['filter' => 'admin']);
+$routes->post('/skim/hapus/(:num)', 'RemunSkim::delete/$1', ['filter' => 'admin']);
 $routes->post('/skim/data/(:num)', 'RemunSkim::data/$1', ['filter' => 'admin']);
 $routes->get('/skim/ceklis/(:num)', 'RemunSkim::ceklis/$1', ['filter' => 'admin']);
 
 $routes->get('/tunjangan', 'RemunTunjangan::index', ['filter' => 'admin']);
 $routes->post('/tunjangan/baru', 'RemunTunjangan::insert', ['filter' => 'admin']);
 $routes->post('/tunjangan/(:num)', 'RemunTunjangan::update/$1', ['filter' => 'admin']);
-$routes->delete('/tunjangan/(:num)', 'RemunTunjangan::delete/$1', ['filter' => 'admin']);
+// $routes->delete('/tunjangan/(:num)', 'RemunTunjangan::delete/$1', ['filter' => 'admin']);
+$routes->post('/tunjangan/hapus/(:num)', 'RemunTunjangan::delete/$1', ['filter' => 'admin']);
 $routes->get('/tunjangan/santri/(:num)', 'RemunTunjangan::santri/$1', ['filter' => 'admin']);
 $routes->post('/tunjangan/data/(:num)', 'RemunTunjangan::data/$1', ['filter' => 'admin']);
 $routes->get('/tunjangan/ceklis/(:num)', 'RemunTunjangan::ceklis/$1', ['filter' => 'admin']);
@@ -72,7 +74,8 @@ $routes->get('/tunjangan/ceklis/(:num)', 'RemunTunjangan::ceklis/$1', ['filter' 
 $routes->get('/potongan', 'RemunPotongan::index', ['filter' => 'admin']);
 $routes->post('/potongan/baru', 'RemunPotongan::insert', ['filter' => 'admin']);
 $routes->post('/potongan/(:num)', 'RemunPotongan::update/$1', ['filter' => 'admin']);
-$routes->delete('/potongan/(:num)', 'RemunPotongan::delete/$1', ['filter' => 'admin']);
+// $routes->delete('/potongan/(:num)', 'RemunPotongan::delete/$1', ['filter' => 'admin']);
+$routes->post('/potongan/hapus/(:num)', 'RemunPotongan::delete/$1', ['filter' => 'admin']);
 $routes->get('/potongan/santri/(:num)', 'RemunPotongan::santri/$1', ['filter' => 'admin']);
 $routes->post('/potongan/data/(:num)', 'RemunPotongan::data/$1', ['filter' => 'admin']);
 $routes->get('/potongan/ceklis/(:num)', 'RemunPotongan::ceklis/$1', ['filter' => 'admin']);
