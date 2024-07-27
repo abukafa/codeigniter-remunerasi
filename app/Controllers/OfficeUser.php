@@ -25,8 +25,8 @@ class OfficeUser extends BaseController
             ->select('santri.id')
             ->select('santri.nip')
             ->select('santri.nama')
-            ->select('santri.laznah')->where('santri.status_santri <> ', 'Suspend', 'user.uname', NULL)->findAll();
-        $distLaznah = $this->santriModel->distinct('laznah')->select('laznah')->orderby('laznah')->findAll();
+            ->select('santri.laznah')->where('santri.status_santri <> ', 'Suspend')->where('user.uname', NULL)->findAll();
+        $distLaznah = $this->santriModel->distinct()->select('laznah')->orderby('laznah')->findAll();
 
         $data = [
             'tables' => $this->db->listTables(),

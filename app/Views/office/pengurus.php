@@ -71,7 +71,7 @@ $this->section('content');
                                     <input type="checkbox" style="width: 24px; height: 24px; font-size: 15px;" <?= ($row['acc']) ? 'checked' : '' ?> onclick="acc(<?= $row['id'] ?>)">
                                 <td class="d-none d-lg-table-cell text-center">
                                     <a href="/pengurus/<?= $row['id'] ?>" class="btn btn-success"><i class="mdi mdi-lead-pencil"></i></a>
-                                    <form action="/pengurus/<?= $row['id']; ?>" method="post" class="d-inline" id="delete-<?= $row['id'] ?>">
+                                    <form action="/pengurus/hapus/<?= $row['id']; ?>" method="post" class="d-inline" id="delete-<?= $row['id'] ?>">
                                         <?= csrf_field(); ?>
                                         <input type="hidden" name="_method" value="delete">
                                         <button type="button" class="btn btn-danger delete-<?= $row['id'] ?>"><i class="mdi mdi-delete-sweep"></i></button>

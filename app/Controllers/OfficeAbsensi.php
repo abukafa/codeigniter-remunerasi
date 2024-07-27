@@ -125,14 +125,14 @@ class OfficeAbsensi extends BaseController
         ];
         $this->absensiModel->update($id, $data);
         flash('Berhasil', 'Mengubah Data Absensi..');
-        return redirect()->to('/absensi/' . $this->request->getVar('bulan'));
+        return redirect()->to(base_url('/absensi/' . $this->request->getVar('bulan')));
     }
 
     public function delete($id, $bln)
     {
         $this->absensiModel->delete($id);
         flash('Berhasil', 'Menghapus Data Absensi..');
-        return redirect()->to('/absensi/' . $bln);
+        return redirect()->to(base_url('/absensi/' . $bln));
     }
 
     public function export()
